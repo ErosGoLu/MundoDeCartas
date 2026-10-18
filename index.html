@@ -1,12 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MundoDeCartas</title>
-    <link rel="stylesheet" href="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MundoDeCartas - Santuario esotérico dedicado al tarot, lecturas espirituales, rituales, hechizos y guía intuitiva para iluminar tu destino.">
+  <title>MundoDeCartas | Tarot, Espiritualidad &amp; Lecturas del Destino</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <!-- Ambient Cosmic Background Layer -->
+  <div class="stars-container" aria-hidden="true">
+    <div class="stars-layer stars-small"></div>
+    <div class="stars-layer stars-medium"></div>
+    <div class="stars-layer stars-large"></div>
+    <div class="nebula-glow nebula-1"></div>
+    <div class="nebula-glow nebula-2"></div>
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="header-container container">
+      <a href="#" class="brand-logo">
+        <span class="brand-symbol" aria-hidden="true">🔮</span>
+        <span class="brand-text">MundoDeCartas</span>
+      </a>
+
+      <!-- CSS-Only Mobile Menu Toggle (Checkbox Hack) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de navegación">
+      <label for="menu-toggle" class="hamburger" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-nosotros" class="nav-link">La Esencia</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#galeria" class="nav-link">Las Cartas</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="btn-nav">
+          <span class="btn-text">Instagram</span>
+          <span class="btn-icon" aria-hidden="true">✨</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-container container">
+        <div class="hero-content">
+          <div class="mystic-badge">
+            <span class="badge-star">✦</span>
+            <span>Portal Esotérico &amp; Lecturas Intuitivas</span>
+            <span class="badge-star">✦</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Los Arcanos Revelan el Camino de Tu <span class="gold-gradient-text">Destino</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            Un velo se levanta entre la sombra y la luz. Encuentra respuestas profundas, serenidad espiritual y claridad a través de la sabiduría milenaria del Tarot.
+          </p>
+
+          <p class="hero-description">
+            Bienvenido a <strong>MundoDeCartas</strong>, un santuario místico diseñado para conectar tu intuición con las fuerzas cósmicas. Te acompañamos a descifrar los mensajes que el universo tiene reservados para ti.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#servicios" class="btn btn-primary">
+              <span>Explorar Servicios</span>
+              <span class="btn-glow"></span>
+            </a>
+            <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <span>Ver Instagram</span>
+              <span class="instagram-symbol" aria-hidden="true">📷</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="astral-card-frame">
+            <div class="card-glow-layer"></div>
+            <div class="card-border-ornament"></div>
+            <img src="https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?q=80&w=1000&auto=format&fit=crop" alt="Composición mística de cartas del Tarot rodeadas de cristales y luz dorada" class="hero-image">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="moon-phase-badge" aria-hidden="true">☽ 🌕 ☾</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-symbol">✦ ⚖ ✦</span>
+        <span class="divider-line"></span>
+      </div>
+    </section>
+
+    <!-- SOBRE MUNDO DE CARTAS -->
+    <section id="sobre-nosotros" class="about-section">
+      <div class="about-container container">
+        <div class="about-card-wrapper">
+          <div class="about-badge">El Origen &amp; La Intención</div>
+          <h2 class="section-title">
+            Un Refugio de <span class="gold-gradient-text">Luz, Intuición y Claridad</span>
+          </h2>
+          
+          <div class="about-text-content">
+            <p>
+              En un mundo acelerado y repleto de incertidumbre, <strong>MundoDeCartas</strong> nace como un espacio sagrado de pausa, introspección y reconexión profunda. No creemos en el azar absoluto, sino en las sincronicidades que el cosmos teje para guiar tus pasos.
+            </p>
+            <p>
+              Nuestra práctica trasciende la simple adivinación. Entendemos el Tarot y los rituales como herramientas sagradas de autoconocimiento, transformación personal y elevación de la frecuencia energética. Cada lectura es un diálogo íntimo con la simbología ancestral, diseñado para devolverte el poder sobre tu propia vida.
+            </p>
+            <p>
+              Aquí encontrarás un espacio libre de juicios, impregnado de respeto, empatía y confidencialidad absoluta. Te ofrecemos un mapa simbólico para que camines con certeza hacia la paz interior que mereces.
+            </p>
+          </div>
+
+          <div class="astral-features">
+            <div class="astral-feature-item">
+              <span class="feature-icon">☾</span>
+              <span class="feature-title">Intuición Sagrada</span>
+              <span class="feature-desc">Canalización enfocada en tu bienestar evolutivo.</span>
+            </div>
+            <div class="astral-feature-item">
+              <span class="feature-icon">☀️</span>
+              <span class="feature-title">Claridad Espiritual</span>
+              <span class="feature-desc">Luz sobre dilemas emocionales y caminos futuros.</span>
+            </div>
+            <div class="astral-feature-item">
+              <span class="feature-icon">✦</span>
+              <span class="feature-title">Ética &amp; Respeto</span>
+              <span class="feature-desc">Acompañamiento consciente sin falsas promesas.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-symbol">✧ 🔮 ✧</span>
+        <span class="divider-line"></span>
+      </div>
+    </section>
+
+    <!-- SERVICIOS ESOTÉRICOS -->
+    <section id="servicios" class="services-section">
+      <div class="services-container container">
+        <div class="section-header">
+          <span class="sub-title">Nuestras Consultas &amp; Prácticas</span>
+          <h2 class="section-title">Servicios <span class="gold-gradient-text">Esotéricos</span></h2>
+          <p class="section-desc">
+            Cada alma atraviesa diferentes etapas. Elige la práctica que mejor resuene con tu momento presente para recibir orientación y armonía.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Tarjeta 1 -->
+          <article class="service-card">
+            <div class="card-inner">
+              <div class="service-icon-wrapper">
+                <span class="service-icon">🎴</span>
+              </div>
+              <h3 class="service-title">Lecturas de Tarot</h3>
+              <p class="service-description">
+                Una exploración profunda de tus preguntas, emociones y dinámicas relacionales. Revela los caminos potenciales y comprende el trasfondo de tus situaciones actuales con los Arcanos.
+              </p>
+              <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="service-link">
+                <span>Consultar Disponibilidad</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+            <div class="card-border-glow"></div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="service-card">
+            <div class="card-inner">
+              <div class="service-icon-wrapper">
+                <span class="service-icon">🕯️</span>
+              </div>
+              <h3 class="service-title">Trabajos Espirituales</h3>
+              <p class="service-description">
+                Procesos enfocados en la apertura de caminos, desbloqueo de energías estancadas y fortalecimiento del aura personal. Diseñados para restaurar tu equilibrio cósmico.
+              </p>
+              <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="service-link">
+                <span>Solicitar Orientación</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+            <div class="card-border-glow"></div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="service-card">
+            <div class="card-inner">
+              <div class="service-icon-wrapper">
+                <span class="service-icon">✨</span>
+              </div>
+              <h3 class="service-title">Rituales y Hechizos</h3>
+              <p class="service-description">
+                Prácticas esotéricas con velas ritualizadas, hierbas sagradas como el romero, cristales e intenciones puras. Un espacio dedicado a la manifestación y protección de tu hogar.
+              </p>
+              <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="service-link">
+                <span>Consultar por Ritual</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+            <div class="card-border-glow"></div>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="service-card">
+            <div class="card-inner">
+              <div class="service-icon-wrapper">
+                <span class="service-icon">🌙</span>
+              </div>
+              <h3 class="service-title">Consultas Personalizadas</h3>
+              <p class="service-description">
+                Un encuentro exclusivo para analizar casos complejos o inquietudes particulares. Evaluación integral de tu situación con guía personalizada y confidencial.
+              </p>
+              <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="service-link">
+                <span>Agendar Consulta</span>
+                <span class="arrow">→</span>
+              </a>
+            </div>
+            <div class="card-border-glow"></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-symbol">✦ 🌙 ✦</span>
+        <span class="divider-line"></span>
+      </div>
+    </section>
+
+    <!-- GALERÍA Y GALERÍA VISUAL DEL TAROT -->
+    <section id="galeria" class="gallery-section">
+      <div class="gallery-container container">
+        <div class="section-header">
+          <span class="sub-title">Simbología &amp; Atmósfera</span>
+          <h2 class="section-title">El Arte Sagrado de <span class="gold-gradient-text">Las Cartas</span></h2>
+          <p class="section-desc">
+            Sumérgete en la estética visual de nuestras sesiones, la energía de los cristales, las hierbas sagradas y la mística del tarot revelado.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- El Mazo Ancestral: Mazo de Tarot apilado -->
+          <figure class="gallery-item item-large">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Mazo de cartas de tarot esotérico apilado en un altar sagrado">
+            <figcaption class="gallery-overlay">
+              <span class="overlay-symbol">🎴</span>
+              <span class="overlay-title">El Mazo Ancestral</span>
+            </figcaption>
+          </figure>
+
+          <!-- Cristales & Elementos: Cristales de amatista, cuarzos y minerales -->
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1567225557594-88d73e551277?q=80&w=800&auto=format&fit=crop" alt="Colección de cristales de sanación, cuarzos, amatistas y elementos sagrados">
+            <figcaption class="gallery-overlay">
+              <span class="overlay-symbol">💎</span>
+              <span class="overlay-title">Cristales &amp; Elementos</span>
+            </figcaption>
+          </figure>
+
+          <!-- Fuego Protector: Velas rituales rodeadas de ramitas de romero -->
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1602928321679-560bb453f190?q=80&w=800&auto=format&fit=crop" alt="Velas de ritual artesanal embadurnadas con romero y hierbas protectoras">
+            <figcaption class="gallery-overlay">
+              <span class="overlay-symbol">🌿🕯️</span>
+              <span class="overlay-title">Fuego Protector</span>
+            </figcaption>
+          </figure>
+
+          <!-- La Revelación de la Lectura: Tarot abierto y desplegado en abanico sobre la mesa -->
+          <figure class="gallery-item item-wide">
+            <img src="https://images.unsplash.com/photo-1601314167099-232775738c74?q=80&w=1200&auto=format&fit=crop" alt="Mazo de tarot completamente abierto y desplegado para una lectura de cartas">
+            <figcaption class="gallery-overlay">
+              <span class="overlay-symbol">✨</span>
+              <span class="overlay-title">La Revelación de la Lectura</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-symbol">✧ 🌟 ✧</span>
+        <span class="divider-line"></span>
+      </div>
+    </section>
+
+    <!-- LLAMADA A LA ACCIÓN (CTA) -->
+    <section id="contacto" class="cta-section">
+      <div class="cta-container container">
+        <div class="cta-card">
+          <div class="cta-stars" aria-hidden="true">✦ ✧ ✦</div>
+          <h2 class="cta-title">¿Listo para Despejar tus Dudas y Conectar con tu Destino?</h2>
+          <p class="cta-description">
+            Escríbenos directamente por Instagram para coordinar tu sesión, consultar por trabajos personalizados o solicitar la lectura que tu alma necesita hoy.
+          </p>
+          
+          <div class="cta-action">
+            <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="btn btn-gold-lg">
+              <span class="btn-icon-ig">📷</span>
+              <span>Consultar por Instagram</span>
+            </a>
+          </div>
+          
+          <span class="cta-handle">@mundo_decartas</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA (FOOTER) -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-symbol-top" aria-hidden="true">☽ 🌕 ☾</div>
+      
+      <h3 class="footer-brand">MundoDeCartas</h3>
+      
+      <div class="footer-social">
+        <a href="https://www.instagram.com/mundo_decartas/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Síguenos en Instagram">
+          <span>Síguenos en Instagram</span>
+          <span class="social-handle">@mundo_decartas</span>
+        </a>
+      </div>
+
+      <!-- Mensaje Poético / Motivacional -->
+      <div class="footer-quote-box">
+        <p class="footer-quote">
+          "A veces, la vida nos coloca frente a caminos oscuros que no alcanzamos a comprender. Confía en tu fuerza interior, escucha los susurros de tu intuición y recuerda que aun en la noche más profunda, una nueva estrella está lista para encenderse. Tu historia no ha terminado: aún guardas las mejores páginas por escribir."
+        </p>
+        <div class="quote-ornament">✦ ⚖ ✦</div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MundoDeCartas. Todos los derechos reservados. Santuario Digital de Tarot y Espiritualidad.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
