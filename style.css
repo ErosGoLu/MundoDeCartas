@@ -364,13 +364,13 @@ ul {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .nav-link {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
-  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--ivory-text);
   position: relative;
@@ -735,7 +735,211 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   8. SECCIÓN VISUAL DEL TAROT (GALERÍA MÍSTICA)
+   8. ORÁCULO PERSONAL (INTERACTIVO CON CSS PURO)
+   -------------------------------------------------------------------------- */
+.oracle-section {
+  padding: 3rem 0;
+}
+
+.oracle-card-box {
+  background: linear-gradient(145deg, rgba(20, 8, 35, 0.9) 0%, rgba(8, 3, 16, 0.95) 100%);
+  border: 1px solid var(--gold-primary);
+  border-radius: 20px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: 0 0 40px rgba(123, 44, 191, 0.25);
+  position: relative;
+}
+
+.spread-trigger {
+  display: none;
+}
+
+.oracle-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+.form-group input {
+  background: rgba(5, 3, 10, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 0.9rem 1.2rem;
+  border-radius: 6px;
+  color: var(--ivory-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.form-group input:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.btn-oracle {
+  margin-bottom: 2px;
+}
+
+.oracle-prompt-msg {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--muted-text);
+  padding: 2rem;
+  border: 1px dashed rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+}
+
+.oracle-result-spread {
+  display: none; /* Oculto por defecto */
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* ESTADO REVELADO MEDIANTE CHECKBOX HACK EN CSS PURO */
+.spread-trigger:checked ~ .oracle-prompt-msg {
+  display: none;
+}
+
+.spread-trigger:checked ~ .oracle-result-spread {
+  display: block;
+}
+
+.spread-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.spread-tag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(123, 44, 191, 0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+}
+
+.spread-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--ivory-text);
+  margin: 0.8rem 0 0.3rem 0;
+}
+
+.spread-sub {
+  font-family: var(--font-serif);
+  color: var(--muted-text);
+  font-size: 1.1rem;
+}
+
+.spread-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarot-card-revealed {
+  background: rgba(13, 6, 24, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.tarot-card-revealed:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(123, 44, 191, 0.3);
+}
+
+.card-badge {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.card-visual {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 280px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.6rem;
+  background: rgba(5, 3, 10, 0.85);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  backdrop-filter: blur(5px);
+}
+
+.card-meaning {
+  font-size: 0.88rem;
+  color: var(--muted-text);
+  text-align: left;
+  line-height: 1.6;
+}
+
+.card-meaning strong {
+  color: var(--ivory-text);
+}
+
+.spread-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.spread-footer p {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--ivory-text);
+  margin-bottom: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   9. GALERÍA MÍSTICA DE IMÁGENES
    -------------------------------------------------------------------------- */
 .gallery-section {
   padding: 3rem 0;
@@ -809,7 +1013,110 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   9. CALL TO ACTION (CTA)
+   10. LAS 78 CARTAS DEL TAROT RIDER-WAITE (SECCIÓN COMPLETA)
+   -------------------------------------------------------------------------- */
+.deck-section {
+  padding: 3rem 0;
+}
+
+.arcana-group {
+  margin-bottom: 3.5rem;
+}
+
+.group-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gold-light);
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.group-desc {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--muted-text);
+  margin-bottom: 1.8rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+}
+
+.cards-grid.mini-grid {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.suit-block {
+  margin-top: 2rem;
+  background: rgba(13, 6, 24, 0.4);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.suit-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--ivory-text);
+  margin-bottom: 1.2rem;
+}
+
+.deck-card {
+  background: rgba(22, 10, 38, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 1rem 0.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  transition: var(--transition-fast);
+  cursor: default;
+}
+
+.deck-card:hover {
+  background: var(--gold-gradient);
+  color: #05030a;
+  border-color: var(--gold-light);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.deck-card .card-num {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 0.2rem;
+}
+
+.deck-card .card-name {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.deck-card.mini {
+  min-height: 65px;
+  padding: 0.8rem 0.5rem;
+}
+
+.deck-card.mini.court {
+  border-color: var(--purple-accent);
+}
+
+.deck-card:hover .card-num,
+.deck-card:hover .card-name {
+  color: #05030a;
+}
+
+/* --------------------------------------------------------------------------
+   11. CALL TO ACTION (CTA)
    -------------------------------------------------------------------------- */
 .cta-section {
   padding: 4rem 0;
@@ -866,7 +1173,7 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   10. FOOTER CON MENSAJE MOTIVACIONAL
+   12. FOOTER CON MENSAJE MOTIVACIONAL
    -------------------------------------------------------------------------- */
 .footer {
   background: #020105;
@@ -942,111 +1249,5 @@ ul {
 .footer-bottom {
   font-size: 0.8rem;
   color: var(--muted-text);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 1.8rem;
-}
-
-/* --------------------------------------------------------------------------
-   11. MEDIA QUERIES (COMPATIBILIDAD RESPONSIVE REAL)
-   -------------------------------------------------------------------------- */
-@media (max-width: 992px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-visual {
-    margin-top: 2rem;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .item-large, .item-wide {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background: rgba(5, 3, 10, 0.98);
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition-smooth);
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 1.8rem;
-  }
-
-  .nav-link {
-    font-size: 1.1rem;
-  }
-
-  /* CSS Menu Toggle Activation */
-  .menu-toggle:checked ~ .nav-menu {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .menu-toggle:checked ~ .hamburger span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  .menu-toggle:checked ~ .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle:checked ~ .hamburger span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .item-large, .item-wide, .gallery-item {
-    grid-column: span 1;
-    height: 250px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Respect user preference for reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+  border-top:
+  
