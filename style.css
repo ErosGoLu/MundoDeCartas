@@ -555,186 +555,7 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   6. SECCIÓN SOBRE MUNDO DE CARTAS
-   -------------------------------------------------------------------------- */
-.about-section {
-  padding: 3rem 0;
-  position: relative;
-}
-
-.about-card-wrapper {
-  background: linear-gradient(180deg, rgba(22, 10, 38, 0.8) 0%, rgba(10, 4, 20, 0.95) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  border-radius: 20px;
-  padding: clamp(2rem, 5vw, 4rem);
-  box-shadow: var(--box-shadow-card);
-  position: relative;
-  overflow: hidden;
-}
-
-.about-card-wrapper::before {
-  content: '✦';
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 1.8rem;
-  color: var(--gold-primary);
-  opacity: 0.3;
-}
-
-.about-badge {
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
-.about-text-content {
-  margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.about-text-content p {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--ivory-text);
-  margin-bottom: 1.2rem;
-  line-height: 1.8;
-}
-
-.astral-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
-  padding-top: 2rem;
-}
-
-.astral-feature-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 8px;
-  border-left: 2px solid var(--gold-primary);
-}
-
-.feature-icon {
-  font-size: 1.5rem;
-  color: var(--gold-light);
-  margin-bottom: 0.5rem;
-}
-
-.feature-title {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  color: var(--ivory-text);
-  margin-bottom: 0.3rem;
-}
-
-.feature-desc {
-  font-size: 0.85rem;
-  color: var(--muted-text);
-}
-
-/* --------------------------------------------------------------------------
-   7. SERVICIOS ESOTÉRICOS
-   -------------------------------------------------------------------------- */
-.services-section {
-  padding: 3rem 0;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.service-card {
-  position: relative;
-  background: var(--bg-purple-card);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 12px;
-  padding: 2.2rem 1.8rem;
-  transition: var(--transition-smooth);
-  backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(123, 44, 191, 0.4);
-  background: linear-gradient(180deg, rgba(35, 15, 60, 0.85) 0%, rgba(13, 6, 24, 0.95) 100%);
-}
-
-.service-icon-wrapper {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(123, 44, 191, 0.2);
-  border: 1px solid var(--gold-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  transition: var(--transition-fast);
-}
-
-.service-card:hover .service-icon-wrapper {
-  background: var(--gold-gradient);
-}
-
-.service-icon {
-  font-size: 1.8rem;
-}
-
-.service-title {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  color: var(--ivory-text);
-  margin-bottom: 0.8rem;
-}
-
-.service-description {
-  font-size: 0.92rem;
-  color: var(--muted-text);
-  margin-bottom: 1.8rem;
-  flex-grow: 1;
-}
-
-.service-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  font-weight: 600;
-  margin-top: auto;
-}
-
-.service-link .arrow {
-  transition: var(--transition-fast);
-}
-
-.service-card:hover .service-link {
-  color: var(--gold-primary);
-}
-
-.service-card:hover .service-link .arrow {
-  transform: translateX(5px);
-}
-
-/* --------------------------------------------------------------------------
-   8. ORÁCULO PERSONAL (INTERACTIVO CON CSS PURO)
+   6. TIRA TUS PROPIAS CARTAS (INTERACTIVO CON CSS PURO)
    -------------------------------------------------------------------------- */
 .oracle-section {
   padding: 3rem 0;
@@ -750,21 +571,35 @@ ul {
 }
 
 .spread-trigger {
-  display: none;
+  display: none; /* Oculta el checkbox que activa la magia css */
+}
+
+.oracle-form-wrapper {
+  animation: fadeIn 0.8s ease forwards;
 }
 
 .oracle-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  align-items: end;
-  margin-bottom: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
 }
 
 .form-group label {
@@ -774,7 +609,8 @@ ul {
   letter-spacing: 1px;
 }
 
-.form-group input {
+.form-group input, 
+.form-group textarea {
   background: rgba(5, 3, 10, 0.8);
   border: 1px solid rgba(212, 175, 55, 0.4);
   padding: 0.9rem 1.2rem;
@@ -784,25 +620,22 @@ ul {
   font-size: 0.95rem;
   outline: none;
   transition: var(--transition-fast);
+  resize: vertical;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   border-color: var(--gold-primary);
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
 }
 
-.btn-oracle {
-  margin-bottom: 2px;
+.form-actions {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
-.oracle-prompt-msg {
-  text-align: center;
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  color: var(--muted-text);
-  padding: 2rem;
-  border: 1px dashed rgba(212, 175, 55, 0.2);
-  border-radius: 10px;
+.btn-oracle {
+  margin-bottom: 2px;
 }
 
 .oracle-result-spread {
@@ -810,8 +643,8 @@ ul {
   animation: fadeIn 0.8s ease forwards;
 }
 
-/* ACTIVACIÓN DE LA BARAJA CON CSS PURO */
-.spread-trigger:checked ~ .oracle-prompt-msg {
+/* LA MAGIA DEL CSS: Cuando el checkbox se activa, oculta formulario y muestra lectura */
+.spread-trigger:checked ~ .oracle-form-wrapper {
   display: none;
 }
 
@@ -884,7 +717,7 @@ ul {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  height: 280px;
+  height: 320px;
   margin-bottom: 1rem;
   border: 1px solid rgba(212, 175, 55, 0.2);
 }
@@ -923,13 +756,34 @@ ul {
   text-align: center;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(212, 175, 55, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .spread-footer p {
   font-family: var(--font-serif);
   font-size: 1.2rem;
   color: var(--ivory-text);
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-reset {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted-text);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-reset:hover {
+  color: var(--gold-light);
 }
 
 @keyframes fadeIn {
@@ -938,81 +792,7 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   9. GALERÍA MÍSTICA DE IMÁGENES
-   -------------------------------------------------------------------------- */
-.gallery-section {
-  padding: 3rem 0;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  height: 280px;
-  background: var(--bg-deep-violet);
-}
-
-.item-large {
-  grid-column: span 2;
-  height: 380px;
-}
-
-.item-wide {
-  grid-column: span 3;
-  height: 320px;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s ease, filter 0.8s ease;
-  filter: brightness(0.8) contrast(1.1);
-}
-
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(5, 3, 10, 0.9) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.5rem;
-  opacity: 0.85;
-  transition: var(--transition-fast);
-}
-
-.overlay-symbol {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-}
-
-.overlay-title {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--gold-light);
-  letter-spacing: 1px;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.06);
-  filter: brightness(0.95) contrast(1.15);
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-  background: linear-gradient(180deg, transparent 20%, rgba(5, 3, 10, 0.95) 100%);
-}
-
-/* --------------------------------------------------------------------------
-   10. LAS 78 CARTAS DEL TAROT RIDER-WAITE (SECCIÓN COMPLETA)
+   7. LAS 78 CARTAS DEL TAROT RIDER-WAITE (BIBLIOTECA COMPLETA)
    -------------------------------------------------------------------------- */
 .deck-section {
   padding: 3rem 0;
@@ -1115,7 +895,169 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   11. CALL TO ACTION (CTA)
+   8. SERVICIOS ESOTÉRICOS
+   -------------------------------------------------------------------------- */
+.services-section {
+  padding: 3rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  position: relative;
+  background: var(--bg-purple-card);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 2.2rem 1.8rem;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(123, 44, 191, 0.4);
+  background: linear-gradient(180deg, rgba(35, 15, 60, 0.85) 0%, rgba(13, 6, 24, 0.95) 100%);
+}
+
+.service-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(123, 44, 191, 0.2);
+  border: 1px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-fast);
+}
+
+.service-card:hover .service-icon-wrapper {
+  background: var(--gold-gradient);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+}
+
+.service-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--ivory-text);
+  margin-bottom: 0.8rem;
+}
+
+.service-description {
+  font-size: 0.92rem;
+  color: var(--muted-text);
+  margin-bottom: 1.8rem;
+  flex-grow: 1;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.service-link .arrow {
+  transition: var(--transition-fast);
+}
+
+.service-card:hover .service-link {
+  color: var(--gold-primary);
+}
+
+.service-card:hover .service-link .arrow {
+  transform: translateX(5px);
+}
+
+/* --------------------------------------------------------------------------
+   9. GALERÍA MÍSTICA (ATMÓSFERA)
+   -------------------------------------------------------------------------- */
+.gallery-section {
+  padding: 3rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  height: 280px;
+  background: var(--bg-deep-violet);
+}
+
+.item-large {
+  grid-column: span 2;
+  height: 380px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(5, 3, 10, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0.85;
+  transition: var(--transition-fast);
+}
+
+.overlay-symbol {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.overlay-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.95) contrast(1.15);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+  background: linear-gradient(180deg, transparent 20%, rgba(5, 3, 10, 0.95) 100%);
+}
+
+/* --------------------------------------------------------------------------
+   10. CALL TO ACTION (CTA)
    -------------------------------------------------------------------------- */
 .cta-section {
   padding: 4rem 0;
@@ -1172,7 +1114,7 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   12. FOOTER CON MENSAJE MOTIVACIONAL
+   11. FOOTER CON MENSAJE MOTIVACIONAL
    -------------------------------------------------------------------------- */
 .footer {
   background: #020105;
@@ -1253,7 +1195,7 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   13. MEDIA QUERIES (RESPONSIVE REAL)
+   12. MEDIA QUERIES (RESPONSIVE REAL)
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .hero-container {
@@ -1274,7 +1216,7 @@ ul {
     margin-top: 2rem;
   }
 
-  .oracle-form {
+  .form-row {
     grid-template-columns: 1fr;
   }
 
@@ -1286,7 +1228,7 @@ ul {
     grid-template-columns: 1fr 1fr;
   }
 
-  .item-large, .item-wide {
+  .item-large {
     grid-column: span 2;
   }
 }
@@ -1344,7 +1286,7 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .item-large, .item-wide, .gallery-item {
+  .item-large, .gallery-item {
     grid-column: span 1;
     height: 250px;
   }
