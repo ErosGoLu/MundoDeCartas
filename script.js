@@ -1,4 +1,4 @@
-// Base de datos de los 22 Arcanos Mayores con las imágenes oficiales del Rider-Waite y lecturas personalizadas
+// Base de datos oficial de los 22 Arcanos Mayores con imágenes directas del Rider-Waite
 const arcanosMayores = [
     { 
         nombre: "0. El Loco", 
@@ -18,7 +18,7 @@ const arcanosMayores = [
     { 
         nombre: "III. La Emperatriz", 
         imagen: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Rider-Waite_Tarot_03_Empress.jpg",
-        generarTexto: (pregunta) => `Когда consultas por "${pregunta}", La Emperatriz señala una etapa de gran fertilidad creativa y crecimiento. Es un llamado a conectar con la abundancia y a cuidar lo que estás construyendo.` 
+        generarTexto: (pregunta) => `Cuando consultas por "${pregunta}", La Emperatriz señala una etapa de gran fertilidad creativa y crecimiento. Es un llamado a conectar con la abundancia y a cuidar lo que estás construyendo.` 
     },
     { 
         nombre: "IV. El Emperador", 
@@ -43,7 +43,7 @@ const arcanosMayores = [
     { 
         nombre: "VIII. La Fuerza", 
         imagen: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Rider-Waite_Tarot_08_Strength.jpg",
-        generarTexto: (pregunta) => `Para lidiar сon "${pregunta}", la verdadera clave será la paciencia y el autocontrol. La Fuerza te recuerda que la suavidad vence a la agresividad cuando hay amor propio.` 
+        generarTexto: (pregunta) => `Para lidiar con "${pregunta}", la verdadera clave será la paciencia y el autocontrol. La Fuerza te recuerda que la suavidad vence a la agresividad cuando hay amor propio.` 
     },
     { 
         nombre: "IX. El Ermitaño", 
@@ -154,7 +154,7 @@ function mostrarResultados(nombre, pregunta) {
 
     cardsContainer.innerHTML = '';
 
-    // Generar cartas con la imagen Rider-Waite real de fondo y su marco dorado
+    // Generar cartas con la imagen real de la etiqueta <img> incrustada como fondo exacto
     cartasSeleccionadas.forEach((arcano, index) => {
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('tarot-card');
@@ -168,7 +168,7 @@ function mostrarResultados(nombre, pregunta) {
                     <p>Arcano 0${index + 1}</p>
                 </div>
                 <div class="card-back">
-                    <div class="card-bg-image" style="background-image: url('${arcano.imagen}');"></div>
+                    <img src="${arcano.imagen}" alt="${arcano.nombre}" class="card-bg-image">
                     <h5>${arcano.nombre}</h5>
                     <p>${textoInterpretacion}</p>
                 </div>
