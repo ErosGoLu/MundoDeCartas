@@ -1,4 +1,4 @@
-// Base de datos de los 22 Arcanos Mayores con las imágenes reales del mazo Rider-Waite y textos únicos
+// Base de datos de los 22 Arcanos Mayores con las imágenes oficiales del Rider-Waite y lecturas personalizadas
 const arcanosMayores = [
     { 
         nombre: "0. El Loco", 
@@ -8,7 +8,7 @@ const arcanosMayores = [
     { 
         nombre: "I. El Mago", 
         imagen: "https://upload.wikimedia.org/wikipedia/commons/d/de/Rider-Waite_Tarot_01_Magician.jpg",
-        generarTexto: (pregunta) => `Для resolver "${pregunta}", cuentas con todas las herramientas necesarias. El Mago te recuerda que tienes el poder de manifestar tus intenciones si actúas con seguridad y enfoque.` 
+        generarTexto: (pregunta) => `Para resolver "${pregunta}", cuentas con todas las herramientas necesarias. El Mago te recuerda que tienes el poder de manifestar tus intenciones si actúas con seguridad y enfoque.` 
     },
     { 
         nombre: "II. La Sacerdotisa", 
@@ -18,7 +18,7 @@ const arcanosMayores = [
     { 
         nombre: "III. La Emperatriz", 
         imagen: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Rider-Waite_Tarot_03_Empress.jpg",
-        generarTexto: (pregunta) => `Cuando consultas por "${pregunta}", La Emperatriz señala una etapa de gran fertilidad creativa y crecimiento. Es un llamado a conectar con la abundancia y a cuidar lo que estás construyendo.` 
+        generarTexto: (pregunta) => `Когда consultas por "${pregunta}", La Emperatriz señala una etapa de gran fertilidad creativa y crecimiento. Es un llamado a conectar con la abundancia y a cuidar lo que estás construyendo.` 
     },
     { 
         nombre: "IV. El Emperador", 
@@ -41,9 +41,9 @@ const arcanosMayores = [
         generarTexto: (pregunta) => `Para lograr lo que buscas en "${pregunta}", necesitarás férrea voluntad. El Carro te anuncia que la victoria llega si mantienes el timón firme ante cualquier obstáculo.` 
     },
     { 
-        nombre: "VIII. La Justicia", 
-        imagen: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Rider-Waite_Tarot_08_Strength.jpg", // Nota: En el Rider-Waite clásico la Fuerza a veces es la 8 y la Justicia la 11, usamos las convenciones estándar
-        generarTexto: (pregunta) => `Para lidiar con "${pregunta}", la verdadera clave será la paciencia y el autocontrol. La Fuerza te recuerda que la suavidad vence a la agresividad cuando hay amor propio.` 
+        nombre: "VIII. La Fuerza", 
+        imagen: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Rider-Waite_Tarot_08_Strength.jpg",
+        generarTexto: (pregunta) => `Para lidiar сon "${pregunta}", la verdadera clave será la paciencia y el autocontrol. La Fuerza te recuerda que la suavidad vence a la agresividad cuando hay amor propio.` 
     },
     { 
         nombre: "IX. El Ermitaño", 
@@ -108,7 +108,7 @@ const arcanosMayores = [
     { 
         nombre: "XXI. El Mundo", 
         imagen: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Rider-Waite_Tarot_21_World.jpg",
-        generarTexto: (pregunta) => `Для cerrar tu consulta sobre "${pregunta}", El Mundo corona tus esfuerzos con realización total. Se completa un ciclo de aprendizaje hermoso y alcanzas la plenitud.` }
+        generarTexto: (pregunta) => `Para cerrar tu consulta sobre "${pregunta}", El Mundo corona tus esfuerzos con realización total. Se completa un ciclo de aprendizaje hermoso y alcanzas la plenitud.` }
 ];
 
 const tarotForm = document.getElementById('tarot-form');
@@ -154,7 +154,7 @@ function mostrarResultados(nombre, pregunta) {
 
     cardsContainer.innerHTML = '';
 
-    // Generar cartas con la imagen real de fondo del Rider-Waite
+    // Generar cartas con la imagen Rider-Waite real de fondo y su marco dorado
     cartasSeleccionadas.forEach((arcano, index) => {
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('tarot-card');

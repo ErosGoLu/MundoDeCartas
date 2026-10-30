@@ -1,14 +1,14 @@
 :root {
     --bg-deep: #09030e;
     --bg-gradient: radial-gradient(circle at 50% 20%, #24113c 0%, #10061d 50%, #09030e 100%);
-    --card-bg: rgba(26, 13, 42, 0.7);
+    --card-bg: rgba(26, 13, 42, 0.85);
     --card-front: linear-gradient(135deg, #2c164a, #150924);
     --accent-gold: #f3cf55;
     --accent-gold-hover: #fae17d;
     --accent-purple: #9b51e0;
     --text-color: #f3f0f7;
-    --text-muted: #c4b5d4;
-    --border-glow: rgba(155, 81, 224, 0.4);
+    --text-muted: #e2d9ec;
+    --border-glow: rgba(243, 207, 85, 0.4);
 }
 
 * {
@@ -55,7 +55,7 @@ header h1 {
     color: var(--accent-gold);
     font-size: 2.8rem;
     letter-spacing: 3px;
-    text-shadow: 0 0 20px rgba(243, 207, 85, 0.3);
+    text-shadow: 0 0 20px rgba(243, 207, 85, 0.4);
 }
 
 header p {
@@ -78,8 +78,8 @@ header p {
     -webkit-backdrop-filter: blur(12px);
     padding: 2.5rem;
     border-radius: 16px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(155, 81, 224, 0.1);
-    border: 1px solid var(--border-glow);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(155, 81, 224, 0.15);
+    border: 1px solid rgba(155, 81, 224, 0.4);
 }
 
 .card-box h2 {
@@ -104,8 +104,8 @@ header p {
     width: 100%;
     padding: 0.9rem;
     border-radius: 8px;
-    border: 1px solid rgba(155, 81, 224, 0.3);
-    background-color: rgba(14, 6, 23, 0.8);
+    border: 1px solid rgba(155, 81, 224, 0.4);
+    background-color: rgba(14, 6, 23, 0.9);
     color: var(--text-color);
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -114,7 +114,7 @@ header p {
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-gold);
-    box-shadow: 0 0 12px rgba(243, 207, 85, 0.25);
+    box-shadow: 0 0 12px rgba(243, 207, 85, 0.3);
 }
 
 .btn-consultar {
@@ -225,12 +225,12 @@ header p {
 
 .veredicto-box {
     text-align: center;
-    background: rgba(155, 81, 224, 0.12);
+    background: rgba(155, 81, 224, 0.15);
     padding: 1.2rem;
     border-radius: 10px;
-    border: 1px dashed var(--accent-purple);
+    border: 1px dashed var(--accent-gold);
     margin-bottom: 2.5rem;
-    box-shadow: inset 0 0 15px rgba(155, 81, 224, 0.1);
+    box-shadow: inset 0 0 15px rgba(155, 81, 224, 0.2);
 }
 
 .veredicto-box h4 {
@@ -263,7 +263,7 @@ header p {
 .tarot-card {
     width: 100%;
     max-width: 280px;
-    height: 420px;
+    height: 440px;
     perspective: 1200px;
     cursor: pointer;
 }
@@ -275,8 +275,8 @@ header p {
     text-align: center;
     transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
     transform-style: preserve-3d;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border-radius: 14px;
 }
 
 .tarot-card:hover .card-inner {
@@ -288,7 +288,7 @@ header p {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 12px;
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -298,14 +298,15 @@ header p {
 
 .card-front {
     background: var(--card-front);
-    border: 2px solid var(--accent-purple);
+    border: 2px solid var(--accent-gold);
     color: var(--accent-gold);
+    box-shadow: inset 0 0 20px rgba(243, 207, 85, 0.15);
 }
 
 .card-front span {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    filter: drop-shadow(0 0 10px rgba(243, 207, 85, 0.3));
+    filter: drop-shadow(0 0 10px rgba(243, 207, 85, 0.4));
 }
 
 .card-front p {
@@ -314,19 +315,19 @@ header p {
     letter-spacing: 1px;
 }
 
-/* Dorso de la carta con la imagen real de Rider-Waite de fondo */
+/* Dorso con marco dorado y la imagen Rider-Waite real de fondo */
 .card-back {
-    background: linear-gradient(135deg, rgba(27, 10, 44, 0.85), rgba(14, 3, 26, 0.92));
-    border: 2px solid var(--accent-gold);
+    background: linear-gradient(135deg, rgba(20, 8, 33, 0.94), rgba(10, 2, 18, 0.98));
+    border: 2.5px solid var(--accent-gold);
     color: var(--text-color);
     transform: rotateY(180deg);
     text-align: left;
     justify-content: flex-start;
     overflow-y: auto;
     position: relative;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.8);
 }
 
-/* Imagen real del Rider-Waite incrustada como fondo con opacidad sutil */
 .card-bg-image {
     position: absolute;
     top: 0;
@@ -335,16 +336,36 @@ header p {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0.18; /* Opacidad elegante para que no opaque el texto */
+    opacity: 0.22;
     z-index: 0;
     pointer-events: none;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
-/* Asegurar que el texto esté por encima de la imagen de fondo */
 .card-back > * {
     position: relative;
     z-index: 1;
+}
+
+.card-back h5 {
+    color: var(--accent-gold);
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(243, 207, 85, 0.3);
+    padding-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.card-back p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    background: rgba(9, 3, 14, 0.75);
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid rgba(155, 81, 224, 0.2);
 }
 
 footer {
