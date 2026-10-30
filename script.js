@@ -1,4 +1,4 @@
-// Base de datos de los 22 Arcanos Mayores con sus ilustraciones vectoriales representativas de fondo y texto único
+// Base de datos de los 22 Arcanos Mayores inspirados en el Tarot Rider-Waite con ilustraciones vectoriales clásicas de fondo
 const arcanosMayores = [
     { 
         nombre: "0. El Loco", 
@@ -38,7 +38,7 @@ const arcanosMayores = [
     { 
         nombre: "VII. El Carro", 
         svg: `<svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"/></svg>`,
-        generarTexto: (pregunta) => `Для lograr lo que buscas en "${pregunta}", necesitarás férrea voluntad. El Carro te anuncia que la victoria llega si mantienes el timón firme ante cualquier obstáculo.` 
+        generarTexto: (pregunta) => `Para lograr lo que buscas en "${pregunta}", necesitarás férrea voluntad. El Carro te anuncia que la victoria llega si mantienes el timón firme ante cualquier obstáculo.` 
     },
     { 
         nombre: "VIII. La Justicia", 
@@ -146,7 +146,7 @@ function mostrarResultados(nombre, pregunta) {
     preguntaUsuario.textContent = `"${pregunta}"`;
 
     // Veredicto Sí / No aleatorio
-    const respuestasPosibles = ["Sí, absolutamente", "No por ahora", "Es muy probable", "El universo dice: No", "Sí, confía en el proceso"];
+    const respuestasPosibles = ["Sí, absolutamente", "No por now", "Es muy probable", "El universo dice: No", "Sí, confía en el proceso"];
     respuestaSino.textContent = respuestasPosibles[Math.floor(Math.random() * respuestasPosibles.length)];
 
     // Seleccionar 3 cartas aleatorias sin repetir
@@ -155,7 +155,7 @@ function mostrarResultados(nombre, pregunta) {
 
     cardsContainer.innerHTML = '';
 
-    // Generar cartas con la ilustración representativa real de fondo
+    // Generar cartas con la ilustración vectorial representativa de fondo
     cartasSeleccionadas.forEach((arcano, index) => {
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('tarot-card');

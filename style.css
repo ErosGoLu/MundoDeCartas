@@ -314,7 +314,7 @@ header p {
     letter-spacing: 1px;
 }
 
-/* Dorso de la carta con la imagen representativa de fondo en baja opacidad */
+/* Dorso de la carta con la ilustración Rider-Waite en baja opacidad */
 .card-back {
     background: linear-gradient(135deg, #1b0a2c, #0e031a);
     border: 2px solid var(--accent-gold);
@@ -326,7 +326,7 @@ header p {
     position: relative;
 }
 
-/* Contenedor de la ilustración representativa de fondo */
+/* Contenedor de la representación visual del Rider-Waite de fondo */
 .card-bg-illustration {
     position: absolute;
     top: 50%;
@@ -334,7 +334,7 @@ header p {
     transform: translate(-50%, -50%);
     width: 85%;
     height: 85%;
-    opacity: 0.12; /* Baja opacidad elegante */
+    opacity: 0.15; /* Baja opacidad artística */
     z-index: 0;
     pointer-events: none;
     display: flex;
